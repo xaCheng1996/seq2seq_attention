@@ -75,10 +75,10 @@ def loadDataset(input_data, target_data):
         word_tem = []
         k = i.split(" ")
         for j in k:
-            if word2id.get(j) is not None and j != "食材":
+            if word2id.get(j) is not None and j != "":
                 word_tem.append(word2id[j])
             else:
-                if j == "商品品类" or j == "食材" or j == "菜系" or "业务性标签" or j == "用餐人数" or j == "制作方法":
+                if j == "" or j == "" or j == "" or "" or j == "" or j == "":
                     continue
                 else:
                     word_tem.append(unknownToken)
